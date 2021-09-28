@@ -1,0 +1,259 @@
+.ours-projects {
+  &__title {
+    margin-bottom: 15px;
+  }
+
+  &__container {
+    padding-top: 40px;
+    padding-bottom: 21px;
+  }
+
+  &__slider {
+    display: flex;
+    flex-direction: column;
+    min-height: 680px;
+    overflow: hidden;
+
+    &-wrapper {
+      display: flex;
+      padding-bottom: 50px;
+      width: 100%;
+      height: 100%;
+    }
+  }
+
+  &__slide {
+    display: grid;
+    grid-template-columns: 1fr 1fr 1fr 1px 1.5fr 1.5fr;
+    grid-template-rows: repeat(2, 1fr);
+    grid-column-gap: 30px;
+    grid-row-gap: 27px;
+    flex: 1 0 100%;
+    height: 100%;
+  }
+
+  &__card {
+    &_img {
+      display: flex;
+      flex-direction: column;
+      margin-bottom: 18px;
+      padding: 5px 6px;
+      width: 100%;
+      height: 184px;
+
+      &-first {
+        background: url("./../img/Rectangle_12.webp") center center no-repeat
+          transparent;
+        background-size: cover;
+      }
+
+      &-second {
+        background: url("./../img/Rectangle_13.webp") center center no-repeat
+          transparent;
+        background-size: cover;
+      }
+
+      &-third {
+        background: url("./../img/Rectangle_14.webp") center center no-repeat
+          transparent;
+        background-size: cover;
+      }
+
+      &-fourth {
+        background: url("./../img/Rectangle_15.webp") center center no-repeat
+          transparent;
+        background-size: cover;
+      }
+
+      &-fifth {
+        background: url("./../img/Rectangle_16.webp") center center no-repeat
+          transparent;
+        background-size: cover;
+      }
+
+      &-six {
+        background: url("./../img/Rectangle_18.webp") center center no-repeat
+          transparent;
+        background-size: cover;
+      }
+
+      &-seven {
+        background: url("./../img/Rectangle_19.webp") center center no-repeat
+          transparent;
+        background-size: cover;
+      }
+
+      &-eight {
+        background: url("./../img/Rectangle_20.webp") center center no-repeat
+          transparent;
+        background-size: cover;
+      }
+
+      &-nine {
+        background: url("./../img/Rectangle_24.webp") center center no-repeat
+          transparent;
+        background-size: cover;
+      }
+
+      &-ten {
+        background: url("./../img/Rectangle_25.webp") center center no-repeat
+          transparent;
+        background-size: cover;
+      }
+    }
+
+    &_description {
+      margin-bottom: 13px;
+      line-height: 22px;
+    }
+
+    &_date {
+      display: flex;
+      align-items: center;
+      margin-left: -2px;
+      font-size: 12px;
+
+      & > svg {
+        margin-right: 4px;
+      }
+    }
+  }
+
+  &__card-big {
+    display: flex;
+    flex-direction: column;
+    padding: 5px 6px 32px 30px;
+    color: var(--text-color-white);
+
+    &_title {
+      margin-bottom: 5px;
+      margin-left: -2px;
+      font-family: "TTFirsNeue", sans-serif;
+      font-weight: 700;
+      font-size: 24px;
+      line-height: 25px;
+    }
+
+    &_description {
+      max-width: 292px;
+      line-height: 22px;
+    }
+
+    &_link {
+      align-self: flex-start;
+      margin-top: auto;
+      border: 3px solid var(--hover);
+      padding: 13px 20px;
+      color: var(--text-color-white);
+      background: transparent;
+      transition: background 0.15s ease-in-out, border-color 0.15s ease-in-out;
+
+      &:hover {
+        background: var(--hover);
+      }
+
+      &:focus {
+        background: var(--focus);
+      }
+
+      &:active {
+        border-color: var(--active);
+        background: var(--active);
+      }
+    }
+
+    & > div[class="ours-projects__card_date"] {
+      margin-top: -10px;
+      margin-bottom: 4px;
+    }
+
+    &_first {
+      grid-column: 4 / span 3;
+      background: url("./../img/Rectangle_21.webp") center center no-repeat
+        transparent;
+      background-size: cover;
+    }
+
+    &_second {
+      grid-column: 1 / span 3;
+      background: url("./../img/Rectangle_22.webp") center center no-repeat
+        transparent;
+      background-size: cover;
+    }
+
+    &_third {
+      grid-column: 1 / span 3;
+      background: url("./../img/Rectangle_23.webp") center center no-repeat
+        transparent;
+      background-size: cover;
+    }
+
+    &_fourth {
+      grid-column: 4 / span 3;
+      background: url("./../img/Rectangle_26.webp") center center no-repeat
+        transparent;
+      background-size: cover;
+    }
+  }
+
+  &__card_middle {
+    min-height: 300px;
+
+    & > p[class="ours-projects__card_description"] {
+      margin-bottom: 20px;
+    }
+
+    &-first {
+      grid-column: 4 / span 2;
+      padding-right: 15px;
+    }
+
+    &-second {
+      margin-left: -15px;
+    }
+
+    &-third {
+      grid-column: 4 / span 2;
+    }
+  }
+
+  &__pagination {
+    display: inline-flex;
+    margin: 0 auto;
+    min-height: 30px;
+    gap: 29px;
+
+    &-btn {
+      border: none;
+      padding: 5px 11px;
+      background: var(--bg-pagination-btn);
+      cursor: pointer;
+      transition: background 0.15s ease-in-out, color 0.15s ease-in-out;
+
+      &:hover {
+        color: var(--hover);
+        background: var(--bg-hover-pagination-btn);
+      }
+
+      &:focus {
+        color: var(--focus-pagination-btn-text-color);
+        background: var(--bg-focus-pagination-btn);
+      }
+
+      &_active {
+        color: var(--text-color-white);
+        background: var(--hover);
+
+        &:hover {
+          color: var(--text-color-white);
+          background: var(--hover);
+        }
+
+        &:focus {
+          color: var(--text-color-white);
+          background: var(--hover);
+        }
+      }
+    }
+  }
+}

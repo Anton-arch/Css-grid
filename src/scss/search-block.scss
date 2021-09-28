@@ -1,0 +1,101 @@
+.search-block {
+  background: var(--bg-black-opacity);
+
+  &__container {
+    display: flex;
+    justify-content: space-between;
+    padding: 13px 0 10px 0;
+  }
+
+  &__phone {
+    display: flex;
+    align-items: center;
+    margin-left: -2px;
+
+    & > svg {
+      fill: var(--text-color-white);
+      transition: fill 0.1s ease-in-out;
+    }
+
+    &-number {
+      font-family: "TTFirsNeue", sans-serif;
+      font-weight: 700;
+      color: var(--text-color-white);
+      transition: color 0.1s ease-in-out;
+    }
+  }
+
+  &__phone:hover {
+    & > svg,
+    .search-block__phone-number {
+      fill: var(--hover);
+      color: var(--hover);
+    }
+  }
+
+  &__phone:focus {
+    & > svg,
+    .search-block__phone-number {
+      fill: var(--focus);
+      color: var(--focus);
+    }
+  }
+
+  &__phone:active {
+    & > svg,
+    .search-block__phone-number {
+      fill: var(--active);
+      color: var(--active);
+    }
+  }
+
+  &__label {
+    display: flex;
+    align-items: flex-start;
+  }
+
+  &__label > svg {
+    margin-right: 5px;
+    width: 18px;
+    height: 18px;
+    fill: var(--text-color-white);
+  }
+
+  &__input {
+    margin-top: -1px;
+    border: none;
+    border-bottom: 1px solid var(--text-color-white);
+    padding: 0;
+    width: 169px;
+    font-size: 14px;
+    color: var(--text-color-white);
+    background: transparent;
+    transition: border-bottom 0.1s ease-in-out;
+
+    &:hover {
+      border-bottom: 1px solid var(--hover);
+    }
+
+    &:focus {
+      border-bottom: 1px solid var(--focus);
+      outline: none;
+    }
+
+    &:active {
+      border-bottom: 1px solid var(--active);
+    }
+
+    &::placeholder {
+      content: "";
+      color: var(--text-color-white);
+      font-family: "TTFirsNeue";
+      font-size: 14px;
+      font-weight: 400;
+      transition: opacity 0.3s ease-in-out;
+    }
+
+    &:active::placeholder {
+      opacity: 0;
+    }
+  }
+}

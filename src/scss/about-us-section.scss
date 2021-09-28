@@ -1,0 +1,71 @@
+.about-us {
+  color: var(--text-color-white);
+  background: var(--bg-black);
+
+  &__text-block {
+    grid-row: 1 / span 2;
+  }
+
+  &__title {
+    margin-bottom: 4px;
+  }
+
+  &__container {
+    padding-top: 32px;
+    padding-bottom: 69px;
+  }
+
+  &__grid {
+    display: grid;
+    grid-template-columns: repeat(2, 1fr);
+    grid-column-gap: 30px;
+    grid-row-gap: 5px;
+  }
+
+  &__subscription {
+    grid-row: 1 / span 2;
+    padding-top: 2px;
+    line-height: 28px;
+  }
+
+  &__img {
+    margin-bottom: 12px;
+  }
+
+  &__form {
+    &_label {
+      position: relative;
+
+      &-text {
+        margin-bottom: 15px;
+        font-family: "TTFirsNeue", sans-serif;
+        font-size: 24px;
+        font-weight: 400;
+      }
+    }
+
+    &_input {
+      margin-right: 28px;
+      border: 1px solid var(--bg-black-opacity);
+      padding: 15px 22px;
+      width: 75%;
+      color: var(--text-color-white);
+      background: var(--bg-black-opacity);
+
+      &:focus {
+        border: 1px solid var(--focus);
+        outline: none;
+      }
+
+      &::placeholder {
+        content: "";
+        color: var(--text-color-white);
+        transition: color 0.25s ease-in-out;
+      }
+
+      &:hover::placeholder {
+        color: var(--hover);
+      }
+    }
+  }
+}

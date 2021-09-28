@@ -1,0 +1,156 @@
+// Сброс общих настроект и т.д.
+@import "normalize";
+@import "colors-consts";
+@import "fonts";
+
+// Сами компоненты
+@import "header";
+@import "search-block";
+@import "first-section";
+@import "about-us-section";
+@import "ours-projects";
+@import "studio-services";
+@import "master-class.scss";
+@import "contacts.scss";
+
+*,
+*::before,
+*::after {
+  box-sizing: border-box;
+}
+
+html,
+body {
+  margin: 0;
+  padding: 0;
+  font-family: "Roboto", sans-serif;
+  font-size: 16px;
+  font-weight: 400;
+}
+
+h1,
+h2,
+h3,
+figure,
+p,
+h4 {
+  margin: 0;
+}
+
+a {
+  text-decoration: none;
+}
+
+img {
+  max-width: 100%;
+  max-height: 100%;
+}
+
+ul {
+  margin: 0;
+  padding: 0;
+  list-style: none;
+}
+
+::selection {
+  background-color: rgba(86, 127, 189, 0.4);
+}
+
+.visually-hidden {
+  position: absolute;
+  width: 1px;
+  height: 1px;
+  margin: -1px;
+  padding: 0;
+  overflow: hidden;
+  border: 0;
+  clip: rect(0 0 0 0);
+}
+
+.container {
+  margin: 0 auto;
+  padding-right: 30px;
+  padding-left: 30px;
+  max-width: 1350px;
+}
+
+// Унифицированные селекторы применяемые на всём проекте
+.hashtag {
+  display: inline-block;
+  align-self: flex-end;
+  margin: 0;
+  padding: 7px 15px;
+  font-size: 14px;
+  color: var(--text-color-white);
+  background: var(--bg-hashtag);
+}
+
+.more-info-or-submit-btn {
+  display: inline-block;
+  align-self: flex-start;
+  border: 3px solid var(--hover);
+  padding: 13px 19px;
+  font-weight: 700;
+  color: var(--text-color-white);
+  background: var(--hover);
+  transition: background 0.15s ease-in-out, border-color 0.15s ease-in-out;
+  cursor: pointer;
+
+  &:hover {
+    background: var(--focus);
+    border-color: var(--focus);
+  }
+
+  &:focus {
+    border-color: var(--focus);
+  }
+
+  &:active {
+    background: var(--active);
+    border-color: var(--active);
+  }
+}
+
+.title {
+  font-family: "TTFirsNeue", sans-serif;
+  font-size: 24px;
+  font-weight: 700;
+}
+
+.input-error-message {
+  position: absolute;
+  top: -50%;
+  left: 24px;
+  font-size: 9px;
+  color: var(--input-error);
+}
+
+.input-error-border {
+  border-color: var(--input-error);
+}
+
+.active-toggle-btn {
+  position: relative;
+  color: var(--hover);
+
+  &::after {
+    content: "";
+    position: absolute;
+    bottom: -5px;
+    left: 0;
+    height: 4px;
+    width: 100%;
+    background: var(--hover);
+    z-index: 5;
+    transition: background 0.15s ease-in-out, background 0.15s ease-in-out;
+  }
+
+  &:active:after {
+    background: var(--hover);
+  }
+
+  &:focus {
+    color: var(--hover);
+    background: transparent;
+  }
+}

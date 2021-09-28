@@ -1,0 +1,79 @@
+.header {
+  background: var(--bg-black);
+
+  &__container {
+    display: flex;
+    align-items: center;
+    padding: 5px 0;
+  }
+
+  .logo {
+    margin-right: 140px;
+    width: 190px;
+  }
+
+  &__nav {
+    margin-top: -3px;
+    margin-right: 88px;
+  }
+
+  &__nav-list {
+    display: flex;
+  }
+
+  &__nav-item:not(:last-child) {
+    margin-right: 79px;
+  }
+
+  &__nav-link {
+    font-family: "TTFirsNeue", sans-serif;
+    color: var(--text-color-white);
+    transition: color 0.1s ease-in-out, background 0.1s ease-in-out;
+  }
+
+  &__nav-link:hover {
+    color: var(--hover);
+  }
+
+  &__nav-link:focus {
+    background: var(--focus);
+  }
+
+  &__nav-link:active {
+    color: var(--active);
+    background: transparent;
+  }
+
+  &__socials-list {
+    display: flex;
+    margin-bottom: -3px;
+  }
+
+  &__socials-item:not(:last-child) {
+    margin-right: 20px;
+  }
+
+  &__socials-link {
+    display: inline-block;
+    width: 30px;
+    height: 30px;
+    cursor: pointer;
+  }
+
+  &__socials-link > svg {
+    fill: var(--default);
+    transition: fill 0.1s ease-in-out;
+  }
+
+  &__socials-link:hover > svg {
+    fill: var(--hover);
+  }
+
+  &__socials-link:focus > svg {
+    fill: var(--focus);
+  }
+
+  &__socials-link:active > svg {
+    fill: var(--active);
+  }
+}

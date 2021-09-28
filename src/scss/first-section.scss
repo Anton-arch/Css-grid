@@ -1,0 +1,64 @@
+.first-section {
+  &__author-name {
+    margin-bottom: 5px;
+    font-size: 16px;
+    font-weight: 400;
+  }
+
+  &__subtile {
+    margin-bottom: 19px;
+    line-height: 37px;
+  }
+
+  &__info-block {
+    display: flex;
+    flex-direction: column;
+  }
+
+  &__grid-container {
+    display: grid;
+    grid-template-columns: repeat(2, 1fr);
+    grid-column-gap: 30px;
+    padding: 40px 0 35px 0;
+
+    &_left {
+      display: flex;
+      flex-direction: column;
+      justify-content: space-between;
+      padding: 16px 14px 65px 60px;
+      background: url("./../img/Rectangle_2.webp") center center no-repeat
+        transparent;
+      background-size: cover;
+    }
+
+    &_right {
+      display: grid;
+      grid-column-gap: 30px;
+      grid-row-gap: 28px;
+      grid-template-columns: repeat(2, 1fr);
+      padding-top: 15px;
+    }
+  }
+
+  &__title {
+    grid-column: 1 / span 2;
+    margin-top: -20px;
+    height: 0 !important;
+    line-height: 1;
+  }
+
+  &__author-name,
+  &__subtile {
+    color: var(--text-color-white);
+  }
+
+  &__subtile {
+    font-family: "TTFirsNeue", sans-serif;
+    font-size: 36px;
+    font-weight: 700;
+  }
+
+  &__first-img {
+    grid-column: 1 / span 2;
+  }
+}
